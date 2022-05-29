@@ -1,6 +1,7 @@
 const Header = () => {
-  return (
-    <header className="py-4 sticky-top">
+  return (<>
+  <div className="py-2"></div>
+    <header className="sticky-top rounded">
       <div
         className=" navbar navbar-main  navbar-expand-lg sticky-top  bg-dark"
         id="navbar_top"
@@ -143,7 +144,7 @@ const Header = () => {
                 >
                   <div className="notification">
                     <span className="badge badge-danger bg-danger  position-absolute">
-                      3
+                      4
                     </span>
                     <i
                       className="fa fa-bell text-white cursor-pointer"
@@ -157,6 +158,7 @@ const Header = () => {
         </div>
       </div>
     </header>
+    </>
   );
 };
 

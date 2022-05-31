@@ -104,7 +104,7 @@ const SideNav = () => {
                     <div className="">
                       <span className="material-icons me-3">move_to_inbox</span>
                     </div>
-                    Inbox
+                    Assessments
                   </>
                 )}
               </Button>{" "}

@@ -3,6 +3,7 @@ import { FaPlus } from "react-icons/fa";
 import BootLogo from "../../../app/assets/images/bootstrap.png";
 import ReactLogo from "../../../app/assets/images/react.png";
 import JsLogo from "../../../app/assets/images/js.png";
+import {Link} from 'react-router-dom'
 
 const Activity = () => {
   return (
@@ -63,9 +64,9 @@ const Activity = () => {
         </div>
 
         <div className="courseInProgressone d-flex align-items-center justify-content-center">
-          <button className="dotBrder d-flex align-items-center justify-content-center ripple" >
+          <Link to='getCourse' className="dotBrder d-flex align-items-center justify-content-center ripple" >
             <FaPlus className="addCourse " />
-          </button>
+          </Link>
         </div>
       </div>
     </div>

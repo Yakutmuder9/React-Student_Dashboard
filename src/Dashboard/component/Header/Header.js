@@ -17,9 +17,10 @@ import {
   Button,
 } from "react-bootstrap";
 import {Link} from 'react-router-dom';
+
 const Header = () => {
   return (
-    <div className=" sticky-top " id="navBar">
+    <div className=" sticky-top " id="topnavBar">
       <Navbar
         collapseOnSelect
         expand="lg"
@@ -28,7 +29,7 @@ const Header = () => {
         className="d-block d-lg-none  h-auto "
         id="naveToggler"
       >
-        <Navbar.Brand href="#home" id="navLogo">My Dashboard</Navbar.Brand>
+        <Navbar.Brand href="#home" id="navLogo" >MyDashboard</Navbar.Brand>
 
         <Navbar.Toggle
           className="text-top"
@@ -38,7 +39,7 @@ const Header = () => {
 
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto mt-4 bolder">
-            <Nav.Link href="dashboard">Dashboard</Nav.Link>
+            <Nav.Link href="/dashboard">Dashboard</Nav.Link>
             <Nav.Link href="dashboard/event">Event</Nav.Link>
 
             <NavDropdown title="Courses" id="collasible-nav-dropdown">
@@ -52,10 +53,9 @@ const Header = () => {
                 Web Architecture
               </NavDropdown.Item>
             </NavDropdown>
-          </Nav>
-
-          <Nav>
-            <Nav.Link href="inbox">Inbox</Nav.Link>
+          
+          
+            <Nav.Link href="Inbox">Inbox</Nav.Link>
             <Nav.Link href="resources">Resources</Nav.Link>
             <Nav.Link eventKey={2} href="/">
               Sign Out

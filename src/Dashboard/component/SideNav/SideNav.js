@@ -170,7 +170,7 @@ const SideNav = () => {
               className="sidenav-footer
         pt-3 mb-5 pb-4"
             >
-              <div className="card mt-2 " id="sidenavCard">
+              <div className="card m-2 " id="sidenavCard">
                 <div className="card-body text-start p-3 w-100">
                   <div className="icon icon-shape icon-sm bg-white shadow text-center mb-3 d-flex align-items-center justify-content-center border-radius-md">
                     <i
@@ -193,6 +193,7 @@ const SideNav = () => {
                   </div>
                 </div>
               </div>
+              
             </div>
           </div>
         </ProSidebar>

@@ -1,5 +1,5 @@
 import "./Dashboard.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import SideNav from "./component/SideNav/SideNav";
 import Footer from "./component/Footer/Footer";
@@ -11,6 +11,7 @@ import Inbox from "./Pages/Inbox_page/Inbox";
 import Resources from "./Pages/Resource_page/Resources";
 import Profile from "./Pages/Profile_page/Profile";
 import Help from "./Pages/Help/Help";
+import GetCourse from "./Pages/Activity/getCourse";
 
 const Dashboard = ({authorised}) => {
   
@@ -33,15 +34,17 @@ const Dashboard = ({authorised}) => {
         {/* --------Start the main dody component that rerendered in every routes --------*/}
         <div className="dhashboardConatainer">
           <>
-          <Routes>
-             <Route path="/" element={<Activity />} />
+          <Outlet />
+          {/* <Routes>
+             <Route path="/*" element={<Activity />} />
              <Route path="courses" element={<Course />} />
             <Route path="event" element={<Event />} />
             <Route path="inbox" element={<Inbox />} />
             <Route path="resources" element={<Resources />} />
             <Route path="profile" element={<Profile />} />
             <Route path="help" element={<Help />} />
-          </Routes>
+            <Route path="getcourse" element={<GetCourse />} />
+          </Routes> */}
          
             
           </>

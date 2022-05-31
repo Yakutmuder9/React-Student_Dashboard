@@ -1,11 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap");
+
 #sideNav {
   /* border-right: 10px solid; */
   height: 100vh;
 }
 #sideNavHeader {
   height: 105px;
+  width: 305px;
   z-index: 100;
-  background: #fafafa;
+  box-shadow: -18px 5px 25px #0a083fb2 !important;
+  background: #000055;
 }
 #sideNavBtn {
   background: #000055;

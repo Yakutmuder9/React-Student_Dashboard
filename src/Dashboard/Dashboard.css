@@ -1,83 +1,90 @@
-/* :root {
-    --bs-blue: #0d6efd;
-    --bs-indigo: #6610f2;
-    --bs-purple: #6f42c1;
-    --bs-pink: #d63384;
-    --bs-red: #dc3545;
-    --bs-orange: #fd7e14;
-    --bs-yellow: #ffc107;
-    --bs-green: #198754;
-    --bs-teal: #20c997;
-    --bs-cyan: #0dcaf0;
-    --bs-white: #fff;
-    --bs-gray: #6c757d;
-    --bs-gray-dark: #343a40;
-    --bs-gray-100: #f8f9fa;
-    --bs-gray-200: #e9ecef;
-    --bs-gray-300: #dee2e6;
-    --bs-gray-400: #ced4da;
-    --bs-gray-500: #adb5bd;
-    --bs-gray-600: #6c757d;
-    --bs-gray-700: #495057;
-    --bs-gray-800: #343a40;
-    --bs-gray-900: #212529;
-    --bs-primary: #0d6efd;
-    --bs-secondary: #6c757d;
-    --bs-success: #198754;
-    --bs-info: #0dcaf0;
-    --bs-warning: #ffc107;
-    --bs-danger: #dc3545;
-    --bs-light: #f8f9fa;
-    --bs-dark: #212529;
-    --bs-primary-rgb: 13,110,253;
-    --bs-secondary-rgb: 108,117,125;
-    --bs-success-rgb: 25,135,84;
-    --bs-info-rgb: 13,202,240;
-    --bs-warning-rgb: 255,193,7;
-    --bs-danger-rgb: 220,53,69;
-    --bs-light-rgb: 248,249,250;
-    --bs-dark-rgb: 33,37,41;
-    --bs-white-rgb: 255,255,255;
-    --bs-black-rgb: 0,0,0;
-    --bs-body-color-rgb: 33,37,41;
-    --bs-body-bg-rgb: 255,255,255;
-    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-    --bs-body-font-family: var(--bs-font-sans-serif);
-    --bs-body-font-size: 1rem;
-    --bs-body-font-weight: 400;
-    --bs-body-line-height: 1.5;
-    --bs-body-color: #212529;
-} */
-.Dash{
-    background: linear-gradient(123.9deg, #1D007E 3.71%, #EBE4FF 70.1%);
-    width: 100vw;
-    height: 100vh;
-    font-family: 'Oswald', sans-serif;
-    overflow: hidden;
-    scrollbar-width: thin;
-    scrollbar-color: blue orange;
-}
-#LeftSide{
-    background: #000055;
-}
 
 /* width */
 ::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #000055;
-    border-radius: 10px;
+  background: #000055;
+  border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  background: #555;
+}
+.Dash {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Oswald", sans-serif;
+  overflow: hidden;
+  background: white;
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+#rightSide {
+  width: 100% !important;
+  height: auto !important;
+  background: linear-gradient(180deg, #0B1B6D -80.28%, rgba(11, 27, 109, 0.96834) -74.94%, rgba(11, 27, 109, 0.0222406) 126.86%, rgba(11, 27, 109, 0) 126.88%);
+background-blend-mode: darken;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  overflow-y: scroll;
+}
+.dhashboardConatainer {
+  width: 100% !important;
+  height: auto !important;
+  padding: 2vh 2vw;
+}
+
+.profileImage {
+  width: 50px;
+  height: 80% !important;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#navBar {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(263.22deg, #220555 15.17%, #1E0945 26.46%, #130A30 57.73%, #0A0B1F 82.58%);
+}
+#naveToggler {
+  width: 100% !important;
+  height: auto;
+  left: -10vw;
+  margin: 0 0 0 10vw;
+  padding: 2vh 5vw;
+  background: linear-gradient(
+    97.77deg,
+    #0b1b6d 4.81%,
+    rgba(11, 27, 109, 0) 128.13%
+  ) !important;
+  box-shadow: 20px 20px 60px #ec1a1a;
+}
+#NavBtnBurger {
+  width: 50px;
+  height: 40px;
+  top: 10px;
+  right: 10px;
+  font-size: 20px !important;
+  position: absolute !important;
+}
+
+#navLogo {
+  font-size: 2.8vmin;
+  margin-bottom: 2vh;
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+}
+Nav.Link{
+  font-size: 2.8vmin;
+  margin-bottom: 2vh;
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
 }

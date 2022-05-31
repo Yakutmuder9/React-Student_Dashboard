@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <nav className={navDark ? "navactive" : ""}>
       <div className="logo">
-        <h1>YAMU</h1>
+        <h1>MyDashbord</h1>
         {menulist ? (
           <></>
         ) : (

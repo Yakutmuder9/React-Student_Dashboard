@@ -3,6 +3,7 @@ import login from "../../app/assets/images/login.svg";
 import cool from "../../app/assets/images/cool.svg";
 import Google from "../../app/assets/images/google.png";
 import { useParams, useNavigate } from "react-router-dom";
+import { useUserAuth } from "../../Auth/UserAuthContext";
 
 import "./login.css";
 
@@ -19,11 +20,11 @@ const LoginPage = ({ campsiteId }) => {
     setFormValues({ ...formValues, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setFormErrors(validate(formValues));
-    setIsSubmit(true);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setFormErrors(validate(formValues));
+  //   setIsSubmit(true);
+  // };
 
   useEffect(() => {
     console.log(formErrors);
@@ -50,12 +51,53 @@ const LoginPage = ({ campsiteId }) => {
     return errors;
   };
 
-  let navigate = useNavigate();
   let { username } = useParams();
 
   function signUpRollerStyles() {
     setRoller(!roller);
   }
+
+  const { logOut, user } = useUserAuth();
+  const navigate = useNavigate();
+  const handleLogout = async (e) => {
+    
+    e.preventDefault();
+    setFormErrors(validate(formValues));
+    setIsSubmit(true);
+    try {
+      await logOut();
+      navigate("/");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+
+   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const { logIn, googleSignIn } = useUserAuth();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    try {
+      await logIn(email, password);
+      navigate("/dashboard");
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  const handleGoogleSignIn = async (e) => {
+    e.preventDefault();
+    try {
+      await googleSignIn();
+      navigate("/dashboard");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   return (
     <>
@@ -64,7 +106,7 @@ const LoginPage = ({ campsiteId }) => {
           <div
             className={
               roller
-                ? "rollerTransition roller d-flex justify-content-end"
+                ? "rollerTransition roller d-flex justify-content-end "
                 : "roller d-flex"
             }
             id="LoginRoller"
@@ -103,13 +145,13 @@ const LoginPage = ({ campsiteId }) => {
             id="signUpPositioning"
           >
             <div
-              className=" pt-5 text-center scroll-none ms-4 mb-3 "
+              className=" pt-4 text-center scroll-none ms-4 mb-3 "
               id="right-cont"
             >
               <h1 className="text-dark bolder">Sign Up</h1>
 
               <form className="ms-5 ps-5">
-                <div className="form-group d-flex text-start">
+                <div className="form-group d-flex text-start ps-3">
                   <div>
                     <label for="signupFirsttname" className="text-dark">
                       First Name
@@ -135,7 +177,7 @@ const LoginPage = ({ campsiteId }) => {
                     />
                   </div>
                 </div>
-                <div className="form-group  text-start">
+                <div className="form-group  text-start ps-3">
                   <label for="exampleInputEmail1" className="text-dark">
                     Email address
                   </label>
@@ -151,7 +193,7 @@ const LoginPage = ({ campsiteId }) => {
                   </small>
                 </div>
 
-                <div className="form-group text-start">
+                <div className="form-group text-start ps-3">
                   <label for="exampleInputPassword1" className="text-dark">
                     Password
                   </label>
@@ -163,7 +205,7 @@ const LoginPage = ({ campsiteId }) => {
                   />
                 </div>
 
-                <p className="text-dark text-start ps-2 ">
+                <p className="text-dark text-start ps-4 ">
                   {" "}
                   Alrady user?{" "}
                   <span
@@ -181,7 +223,7 @@ const LoginPage = ({ campsiteId }) => {
                       navigate("/dashboard");
                     }}
                     type="submit"
-                    className="btn btn-primary text-white w-100 py-2"
+                    className="btn btn-primary text-white w-100 py-2 ms-3"
                   >
                     Sing Up
                   </button>
@@ -196,13 +238,15 @@ const LoginPage = ({ campsiteId }) => {
         </div>
 
         <div
-          className="col card container border text-center  d-flex flex-column justify-content-center align-items-center mb-5  px-5 w-50 "
+          className="col card container border text-center  d-flex flex-column justify-content-center align-items-center mb-5 "
           id="signupSide"
         >
           <div
-            className="pb-5 pe-5 text-center  scroll-none  w-10"
+            className="pb-5 pe-5  mt-2  scroll-none "
             id="right-cont"
-          ><h6>
+          >
+            
+            {/* <h6>
           {Object.keys(formErrors).length === 0 && isSubmit ? (
             <div className="bg-success p-2 mx-3">
               Signed in successfully
@@ -210,8 +254,9 @@ const LoginPage = ({ campsiteId }) => {
           ) : (
             <pre className="text-dark">{JSON.stringify(formValues, undefined, 2)}</pre>
           )}
-        </h6>
-            <h1 className="text-dark bolder">Sign in</h1>
+        </h6> */}
+
+            <h1 className="text-dark bolder ">Sign in</h1>
 
             <form className="needs-validation" onSubmit={handleSubmit}>
               <div className="form-group  text-start">
@@ -219,14 +264,15 @@ const LoginPage = ({ campsiteId }) => {
                   Email address
                 </label>
                 <input
-                  type="text"
+                  type="email"
                   name="email"
                   className="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
                   placeholder="Enter email"
                   value={formValues.email}
-                  onChange={handleChange}
+                  // onChange={handleChange}
+                  onChange={(e) => {setEmail(e.target.value);handleChange()}}
                 />
                 <p className="text-danger">{formErrors.email}</p>
                 <small id="emailHelp" className="form-text ">
@@ -243,8 +289,9 @@ const LoginPage = ({ campsiteId }) => {
                   className="form-control"
                   id="exampleInputPassword1"
                   placeholder="Password"
-                  value={formValues.password}
-                  onChange={handleChange}
+                  // value={formValues.password}
+                  // onChange={handleChange}
+                  onChange={(e) =>{ setPassword(e.target.value); handleChange()}}
                 />
                 <p className="text-danger">{formErrors.password}</p>
               </div>
@@ -287,9 +334,9 @@ const LoginPage = ({ campsiteId }) => {
                   Sign in
                 </button>
               </div>
-              <h5 className="text-dark pt-2">Or</h5>
+              <h5 className="text-dark ">Or</h5>
               <div className="google_singin">
-                <button className="btn btn-primary mt-3  text-white w-100 py-2">
+                <button className="btn btn-primary  text-white w-100 py-2" type="submit" onClick={handleGoogleSignIn}>
                  <img src={Google} className='pe-2 mb-1'/> Continue with Google
                 </button>
               </div>

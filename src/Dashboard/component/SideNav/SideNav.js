@@ -18,25 +18,22 @@ const SideNav = () => {
   };
   return (
     <>
-      <div id="sideNav">
-        <ProSidebar collapsed={menuCollapse}>
-          <SidebarHeader id="sideNavHeader" className="d-flex">
+      <div id="sideNav" className="overflow-auto">
+        <ProSidebar collapsed={menuCollapse} className='overflow-auto'>
+          <SidebarHeader id="sideNavHeader" >
             <div className="logotext">
               <p>
                 {menuCollapse ? (
                   <div className="col shadow d-block" id="DashboardLogo">
                     <img className="ms-2 pt-3 " id="logo_bird" src={Bird} alt=''/>
 
-                    <hr
-                      className="horizontal position-absolute bg-white w-100 p-1  "
-                      id="horizontalLine"
-                    ></hr>
+                    
                   </div>
                 ) : (
                   <div className="col shadow " id="DashboardLogo">
                     <img className=" " id="logo_bird" src={Bird} alt=''/>
-                    <h1 className="pt-5 pb-4 ps-5 mt-4 bolder">Dashboard</h1>
-                    <hr className="horizontal bg-secondary p-1 mt-1" />
+                    <h1 className="pt-4 pb-4 ps-5 mt-4 bolder">MyDashboard</h1>
+                    <hr className="horizontal bg-secondary p-1 mt-2" />
                   </div>
                 )}
               </p>
@@ -46,8 +43,8 @@ const SideNav = () => {
             </div>
           </SidebarHeader>
 
-          <div className="mt-5 pt-5 h-100 scroll d-block" id="sideNavBtn">
-            <NavLink to="/dashboard/activity" className='text-decoration-none'>
+          <div className="mt-2 pt-1 h-100 overflow-auto  d-block bg-dark" id="sideNavBtn">
+            <NavLink to="/dashboard" className='text-decoration-none'>
               {" "}
               <Button  className=" w-100 mt-2 py-2" variant="white">
                 {menuCollapse ? (
@@ -127,14 +124,16 @@ const SideNav = () => {
                   </>
                 )}
               </Button>{" "}
-            </NavLink>
-            <p
-              className="w-100 my-3 py-2 text-center"
+            </NavLink >
+
+            <h6
+              className="w-100  text-center overflow-hidden" 
               id="acountDetailTx"
-              variant="secondary"
+              variant="white"
             >
               Acount Detial
-            </p>{" "}
+            </h6>{" "}
+
             <NavLink to="/dashboard/profile" className='text-decoration-none'>
               <Button className=" w-100 mt-2 py-2" variant="success">
                 {menuCollapse ? (
@@ -169,7 +168,7 @@ const SideNav = () => {
             </NavLink>
             <div
               className="sidenav-footer
-        pt-3"
+        pt-3 mb-5 pb-4"
             >
               <div className="card mt-2 " id="sidenavCard">
                 <div className="card-body text-start p-3 w-100">

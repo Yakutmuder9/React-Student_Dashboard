@@ -1,164 +1,131 @@
+import {
+  FaUserAlt,
+  FaBell,
+  FaAlignJustify,
+  FaTimes,
+  FaBars,
+  FaSistrix,
+} from "react-icons/fa";
+import prof from "../../../app/assets/images/prof.jpg";
+import {
+  Navbar,
+  Container,
+  Nav,
+  NavDropdown,
+  Form,
+  FormControl,
+  Button,
+} from "react-bootstrap";
+import {Link} from 'react-router-dom';
 const Header = () => {
-  return (<>
-  <div className="py-2"></div>
-    <header className="sticky-top rounded">
-      <div
-        className=" navbar navbar-main  navbar-expand-lg sticky-top  bg-dark"
+  return (
+    <div className=" sticky-top " id="navBar">
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        bg="dark"
+        variant="dark"
+        className="d-block d-lg-none  h-auto "
+        id="naveToggler"
+      >
+        <Navbar.Brand href="#home" id="navLogo">My Dashboard</Navbar.Brand>
+
+        <Navbar.Toggle
+          className="text-top"
+          aria-controls="responsive-navbar-nav"
+          id="NavBtnBurger"
+        />
+
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto mt-4 bolder">
+            <Nav.Link href="dashboard">Dashboard</Nav.Link>
+            <Nav.Link href="dashboard/event">Event</Nav.Link>
+
+            <NavDropdown title="Courses" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="courses">Bootstrap</NavDropdown.Item>
+              <NavDropdown.Item href="courses">
+                React
+              </NavDropdown.Item>
+              <NavDropdown.Item href="courses">Node Js</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="courses">
+                Web Architecture
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+
+          <Nav>
+            <Nav.Link href="inbox">Inbox</Nav.Link>
+            <Nav.Link href="resources">Resources</Nav.Link>
+            <Nav.Link eventKey={2} href="/">
+              Sign Out
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+
+      <header
+        class="navbar navbar-main d-none d-lg-block navbar-expand-lg  py-2 px-3 "
         id="navbar_top"
       >
-        <div className="col sticky-top py-1 px-3 d-flex justify-content-between">
-          <nav className="navbar navbar-light d-block .d-sm-none d-lg-none">
-            <a className="navbar-brand" href="#"></a>
-            <button
-              className="navbar-toggler "
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarTogglerDemo02"
-              aria-controls="navbarTogglerDemo02"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <i className="fa fa-bars"></i>
-            </button>
-
-            <div
-              className="collapse navbar-collapse p-3 "
-              id="navbarTogglerDemo02"
-            >
-              <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li className="nav-item active">
-                  <a
-                    className="nav-link text-white text-bold"
-                    href="/dashboard"
-                  >
-                    Dashboard<span className="sr-only">(current)</span>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link text-secondary" href="/dashboard">
-                    Courses
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link text-secondary" href="">
-                    Event
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link text-secondary" href="inbox.html">
-                    Inbox
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link text-secondary" href="resource.html">
-                    Resources
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link text-secondary" href="signin.html">
-                    Sign in
-                  </a>
-                </li>
-              </ul>
-              <form className="form-inline my-2 my-lg-0">
-                <input
-                  className="form-control mr-sm-2"
-                  type="search"
-                  placeholder="Search"
-                />
-                <button
-                  className="btn btn-outline-success my-2 my-sm-0"
-                  type="submit"
-                >
-                  Search
-                </button>
-              </form>
-            </div>
-          </nav>
-
-          <div aria-label="breadcrumb">
-            <ol className="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-              <li className="breadcrumb-item text-sm">
-                <a className="opacity-5 text-white " href="">
+        <div class=" w-100 d-flex justify-content-between">
+          <div aria-label="breadcrumb " className="d-lg-block d-none">
+            <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+              <li class="breadcrumb-item text-sm">
+                <a class="opacity-5 text-white" href="">
                   Pages
                 </a>
               </li>
               <li
-                className="breadcrumb-item text-sm text-white active"
+                class="breadcrumb-item text-sm text-white active"
                 aria-current="page"
               >
                 Dashboard
               </li>
             </ol>
-            <h3 className="font-weight-bolder mb-0 text-secondary">
-              {" "}
-              Dashboard
-            </h3>
+            <h5 class="font-weight-bolder mb-0 text-secondary">Dashboard</h5>
           </div>
 
           <div
-            className="collapse navbar-collapse d-lg-flex justify-content-end mt-sm-0 mt-2 me-md-0 me-sm-4 w-auto"
+            class="collapse navbar-collapse d-lg-flex justify-content-end mt-sm-0 mt-2 me-md-0 me-sm-4 w-auto"
             id="navbar"
           >
-            <div className="ms-md-auto pe-md-3 d-flex align-items-center">
-              <div className="input-group">
-                <span className="input-group-text text-body">
-                  <i className="fas fa-search" aria-hidden="true"></i>
+            <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+              <div class="input-group">
+                <span class="input-group-text text-body text-primary bg-secondary">
+                  <FaSistrix aria-hidden="true" />
                 </span>
                 <input
                   type="text"
-                  className="form-control"
+                  class="form-control"
                   placeholder="Type here..."
                 />
               </div>
             </div>
-            <ul className="navbar-nav justify-content-end">
-              <li className="nav-item d-flex align-items-center">
-                <a
-                  href=""
-                  className="nav-link text-body  font-weight-bold px-2 p-1 ml-2 btn btn-outline-primary"
+            <ul class="navbar-nav justify-content-end">
+              <li class="nav-item d-flex align-items-center">
+                <Link
+                  to="/"
+                  class="nav-link text-body font-weight-bold px-2 p-1 ml-2 btn btn-outline-primary"
                 >
-                  <i className="fa fa-user text-white pe-1" title="Edit"></i>
-                  <span className="d-sm-inline d-none text-white">
-                    Log out{" "}
-                  </span>
-                </a>
+                  <FaUserAlt icon="fa-solid fa-bars " />
+                  <span class="ps-1 d-sm-inline d-none ">Sign out</span>
+                </Link>
               </li>
 
-              <li className="nav-item px-3 d-flex align-items-center">
-                <a href="" className="nav-link text-body p-0">
-                  <i
-                    className="fa fa-cog text-white cursor-pointer"
-                    id="setting"
-                  ></i>
+              <li class="nav-item px-3 d-flex align-items-center">
+                <a href="" class="nav-link text-body p-0">
+                  <FaBell class="fa fa-cog cursor-pointer" id="setting" />
                 </a>
               </li>
-
-              <li className="nav-item dropdown pe-2 d-flex align-items-center">
-                <a
-                  href=""
-                  className="nav-link text-body p-0"
-                  id="dropdownMenuButton"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <div className="notification">
-                    <span className="badge badge-danger bg-danger  position-absolute">
-                      4
-                    </span>
-                    <i
-                      className="fa fa-bell text-white cursor-pointer"
-                      id="setting"
-                    ></i>
-                  </div>
-                </a>
-              </li>
+            <div className="h-100">
+              <Link to='profile' className="h-100"><img src={prof} alt="" className="profileImage" /></Link> 
+              </div>
             </ul>
           </div>
         </div>
-      </div>
-    </header>
-    </>
+      </header>
+    </div>
   );
 };
 

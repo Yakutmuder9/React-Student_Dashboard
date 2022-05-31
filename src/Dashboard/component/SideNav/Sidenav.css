@@ -1,73 +1,82 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap");
-
-#sideNav{
+#sideNav {
+  /* border-right: 10px solid; */
   height: 100vh;
 }
-#sideNavHeader{
-  height:120px;
-  font-size: 20px;
-  width: 330px;
+#sideNavHeader {
+  height: 105px;
   z-index: 100;
-  box-shadow: -18px 5px 25px #4545ca !important;
+  background: #fafafa;
+}
+#sideNavBtn {
   background: #000055;
 }
-#sideNavBtn{
-  background: #000055;
-}
-#sideNavBtn p{
-  color: gray!important;
+#sideNavBtn p {
+  color: gray !important;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 22px;
 }
-#sideNavBtn Button{
-  background: #1C2A70;
-border-radius: 10px;
-font-family: "Oswald", sans-serif;
-font-weight: 400;
-font-size: 22px;
-display: flex;
-padding-left: 25px;
+#sideNavBtn Button {
+  color: gray;
+  border: none;
+  margin:2px!important; 
+  background: transparent;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  display: flex;
+  padding-left: 25px;
 }
+#sideNavBtn Button:active, #sideNavBtn Button:hover {
+  background-color: rgb(61, 93, 154);
+  color: white;
+}
+
+
 #sideNavHeader .closemenu {
-  color: rgb(0, 0, 0)!important;
+  color: rgb(0, 0, 0) !important;
   background: #27276a;
   position: absolute;
   width: 100%;
   box-shadow: -18px 5px 25px #1919688c !important;
   z-index: 9999;
-  bottom:0;
+  bottom: 0;
   font-weight: bold;
-  font-size: 42px;
+  font-size: 38px;
   cursor: pointer;
 }
-#sideNav NavLink{
-  text-decoration: none!important;
+#sideNav NavLink {
+  text-decoration: none !important;
 }
+#acountDetailTx {
+  color: rgb(212, 211, 211)!important;
+  cursor: all-scroll;
+  font-size: 18px!important;
+  font-family: "Oswald", sans-serif;
+}
+
 #DashboardLogo {
   z-index: 100;
-  box-shadow: -18px 5px 25px #4545ca !important;
+  box-shadow: -18px 5px 25px #000004 !important;
   position: absolute;
-  width: 330px;
+  width: 300px;
   background: #000055;
-  height: 170px;
+  height: 90px;
 }
 
 #DashboardLogo img {
   position: absolute;
-  margin-left: 40px;
-  margin-top: 16px;
-  width: 60px;
+  margin-left: 30px;
+  margin-top: 15px;
+  width: 30px;
 }
 #DashboardLogo h1 {
-  margin-left: 10%;
+  font-size: 20px;
   font-family: "Oswald", sans-serif;
 }
-#horizontalLine{
-  margin-top: 150px!important;
+#horizontalLine {
+  margin-top: 50px !important;
 }
-
-
 
 #sidenavCard {
   z-index: 1;
@@ -85,8 +94,3 @@ padding-left: 25px;
   width: 100% !important;
   height: 40% !important;
 }
-
-
-
-
-

@@ -1,9 +1,24 @@
-import React from 'react'
+import  "./inbox.css";
 
 const Inbox = () => {
-  return (
-    <div className='bg-warning'>Inbox</div>
-  )
-}
+  return (<>
+  <div className="inbox bg-danger my-3">
+    inbox
+    </div>
+  <div className="inbox bg-danger my-3">
+    inbox
+    </div>
+  <div className="inbox bg-danger my-3">
+    inbox
+    </div>
+  <div className="inbox bg-danger my-3">
+    inbox
+    </div>
+  <div className="inbox bg-danger my-3">
+    inbox
+    </div>
+  </>
+  );
+};
 
-export default Inbox
+export default Inbox;

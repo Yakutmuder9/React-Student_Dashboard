@@ -27,14 +27,14 @@ const Dashboard = ({authorised}) => {
         <SideNav />
       </div>
 
-      <div className="col ps-3 pe-3" id="rightSide">
+      <div className="col" id="rightSide">
         <Header />
 
         {/* --------Start the main dody component that rerendered in every routes --------*/}
-        <div className="dhashboardConatainer w-100 h-100 bg-primary">
+        <div className="dhashboardConatainer">
           <>
           <Routes>
-             <Route path="activity" element={<Activity />} />
+             <Route path="/" element={<Activity />} />
              <Route path="courses" element={<Course />} />
             <Route path="event" element={<Event />} />
             <Route path="inbox" element={<Inbox />} />

@@ -1,0 +1,79 @@
+.activity {
+  width: 100%;
+  height: 200vh;
+  background: #62a22a00;
+}
+.courseInProgress {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+.courseInProgressone {
+  background: white;
+  color: #000062;
+  box-shadow: 10px 5px 16px -5px #000048, 5px -2px 6px #000062;
+  height: 110px;
+  box-shadow: #0b012c;
+  padding: 10px 15px;
+}
+.dotBrder {
+  width: 90%;
+  height: 90%;
+  border-radius: 20px;
+  border: 2px dotted #000048;
+}
+.addCourse {
+  font-size: 50px;
+  background: #000048c8;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/*-----------addCourseBtn---------*/
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 1.2s;
+  margin: 20px;
+  border-radius: 125px;
+}
+.ripple:hover {
+  background: #0336b7 radial-gradient(circle, transparent 1%, #0336b7 1%)
+    center/15000%;
+  text-shadow: 1px 1px 7px #030303;
+}
+.ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+/*-----------Progress bar---------*/
+progress {
+  border: 1px solid silver;
+  border-radius: 5px;
+  width: 80%;
+  height: 10px;
+  background: rgb(0, 255, 136);
+}
+
+progress::-webkit-progress-bar {
+  background: rgb(255, 255, 255);
+}
+
+progress[value]::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(
+      -45deg,
+      transparent 33%,
+      rgba(0, 0, 0, 0.1) 33%,
+      rgba(0, 0, 0, 0.1) 66%,
+      transparent 66%
+    ),
+    -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)),
+    -webkit-linear-gradient(left, rgb(128, 255, 0), rgb(68, 255, 180));
+
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+}

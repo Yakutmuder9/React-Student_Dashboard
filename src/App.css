@@ -1,0 +1,31 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  overflow: hidden;
+  color: whitesmoke;
+  font-family: "Oswald", sans-serif;
+  
+}
+:root {
+  --color: rgb(194, 120, 25);
+  --color2: rgb(0, 255, 242);
+  --background: radial-gradient(
+    50% 50% at 64.38% 50%,
+    #364596 0%,
+    #0b1b6d 100%
+  );
+  --background-blend-mode: darken;
+}
+body {
+  width: 100vw;
+  height: auto;
+  background: var(--background);
+}
+.App {
+  width: 100vw;
+  height: auto;
+}

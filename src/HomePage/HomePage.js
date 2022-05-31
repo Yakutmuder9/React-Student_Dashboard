@@ -8,7 +8,7 @@ import Contact from "./component/Contact";
 const HomePage = () => {
 
   return (
-    <div className="App">
+    <div className="Home overflow-auto bg-dark">
       <Header />
       <Main />
       <About />

@@ -1,0 +1,97 @@
+.home span {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: #1f1302;
+  width: 100vmin;
+  height: 100vmin;
+}
+.home .main {
+  width: 70vmin;
+  height: 70vmin;
+  border-width: 2px;
+  display: grid;
+  z-index: 100;
+  justify-content: center;
+  align-content: center;
+}
+
+.home .main > * {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.san-center {
+  width: 80vmin;
+  height: 80vmin;
+  position: absolute;
+  top: -12vh;
+  left: 14%;
+}
+
+.home .item {
+    z-index: -1;
+  animation: spinAround 12s linear infinite;
+}
+.home .item:hover {
+   animation-duration: 99s;
+}
+
+.main > * > img {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg) translate(140px) scale(0.25);
+  }
+
+  to {
+    transform: rotate(360deg) translate(140px) scale(0.25);
+  }
+}
+#spinerone {
+  animation-delay: -2s;
+}
+#spinertwo {
+  animation-delay: -4s;
+}
+#spinerthree {
+  animation-delay: -6s;
+}
+#spinerfour {
+  animation-delay: -8s;
+}
+#spinerfive {
+  animation-delay: -10s;
+}
+#spinersix {
+  animation-delay: -12s;
+}
+
+
+
+.rippleBtn {
+  background-position: center;
+  transition: background 1.2s;
+}
+.rippleBtn:hover {
+  background: #072d8e radial-gradient(circle, transparent 1%, #0336b7 1%)
+    center/15000%;
+  text-shadow: 1px 1px 7px #030303;
+}
+.rippleBtn:active {
+  background-color: #0790ff;
+  background-size: 100%;
+  transition: background 0s;
+}

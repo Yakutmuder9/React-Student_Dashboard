@@ -1,33 +1,16 @@
-import {
-  FaUserAlt,
-  FaBell,
-  FaAlignJustify,
-  FaTimes,
-  FaBars,
-  FaSistrix,
-} from "react-icons/fa";
+import { FaUserAlt, FaBell, FaSistrix } from "react-icons/fa";
 import prof from "../../../app/assets/images/prof.jpg";
-import {
-  Navbar,
-  Container,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-} from "react-bootstrap";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-
   const urlLocation = window.location.pathname.substring(1);
 
   function capitalizeFirstLetter(e) {
     return e.charAt(0).toUpperCase() + e.slice(1);
   }
-  // const str = str.substring(1)
   const urlLocationCapitalize = capitalizeFirstLetter(`${urlLocation}`);
-  console.log(urlLocationCapitalize)
+  console.log(urlLocationCapitalize);
 
   return (
     <div className=" sticky-top " id="topnavBar">
@@ -88,10 +71,13 @@ const Header = () => {
               <li
                 class="breadcrumb-item text-sm text-white active"
                 aria-current="page"
-              >{urlLocation}
+              >
+                {urlLocation}
               </li>
             </ol>
-            <h5 class="font-weight-bolder mb-0 text-secondary">{urlLocationCapitalize}</h5>
+            <h5 class="font-weight-bolder mb-0 text-secondary">
+              {urlLocationCapitalize}
+            </h5>
           </div>
 
           <div

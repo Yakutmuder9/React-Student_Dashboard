@@ -183,7 +183,7 @@ const SideNav = () => {
                       Please check our docs
                     </p>
                     <img src={webapp} alt=''/>
-                    <a
+                    <a href=""
                       
                       className="btn btn-white btn-outline-primary btn-sm w-100 text-white mb-0"
                     >

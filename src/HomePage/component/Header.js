@@ -1,17 +1,7 @@
-import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import LoginPage from "../LoginModal/LoginModal";
-import '../LoginModal/login.css'
-import {
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  FormGroup,
-  Label,
-  Container,
-} from "reactstrap";
+import "../LoginModal/login.css";
+import { Button, Modal, ModalHeader } from "reactstrap";
 
 const Navbar = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -48,18 +38,20 @@ const Navbar = () => {
           </ul>
         )}
       </div>
-      {/* <button onClick={()=> {navigate("/login");}}>Menu list name</button> */}
-      <Button id="ModelBtn" outline={modalOpen} onClick={() => setModalOpen(true)}>
+      <Button
+        id="ModelBtn"
+        outline={modalOpen}
+        onClick={() => setModalOpen(true)}
+      >
         Login
       </Button>
       <Modal
         fullscreen
         isOpen={modalOpen}
-        className="shadow p-md-5 p-sm-3 rounded" id="modaloverLay"
+        className="shadow p-md-5 p-sm-3 rounded"
+        id="modaloverLay"
       >
-        <ModalHeader toggle={() => setModalOpen(false)}>
-          
-        </ModalHeader>{" "}
+        <ModalHeader toggle={() => setModalOpen(false)}></ModalHeader>{" "}
         <LoginPage />
       </Modal>
     </nav>

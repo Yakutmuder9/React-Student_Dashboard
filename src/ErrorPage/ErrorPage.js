@@ -1,8 +1,7 @@
 import React from "react";
 import "./error.css";
 import errorimg from "../app/assets/images/error.png";
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
 
 const ErrorPage = () => {
   let navigate = useNavigate();
@@ -18,11 +17,17 @@ const ErrorPage = () => {
             The Page you are looking for is not found
           </div>
         </div>
-        <button onClick={() =>{navigate("/")}}>Back to home &nbsp; <i class="fa fa-arrow-right"></i></button>
+        <button
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Back to home &nbsp; <i class="fa fa-arrow-right"></i>
+        </button>
       </div>
 
       <div className="right d-none d-md-block ">
-        <img src={errorimg} alt=''/>
+        <img src={errorimg} alt="" />
       </div>
     </div>
   );

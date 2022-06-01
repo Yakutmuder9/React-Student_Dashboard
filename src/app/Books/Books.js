@@ -1,39 +1,49 @@
-
-export  const classNameChage =[
-    {
-    id: 0, cls:'item blog'
-    },
-    {
-    id: 1, cls:'item photo'
-    },
-    {
-    id: 2, cls:'item bookspantwo'
-    },
-    {
-    id: 3, cls:'item photo'
-    },
-    {
-    id: 4, cls:'item blog'
-    },
-    {
-    id:5, cls:'item blog'
-    },
-    {
-    id: 6, cls:'item photo'
-    },
-    {
-    id: 7, cls:'item blog'
-    },
-    {
-    id: 8, cls:'item bookspantwo'
-    },
-    {
-    id: 9, cls:'item photo'
-    },
-    {
-    id: 10, cls:'item blog'
-    }
- ]
+export const classNameChage = [
+  {
+    id: 0,
+    cls: "item blog",
+  },
+  {
+    id: 1,
+    cls: "item photo",
+  },
+  {
+    id: 2,
+    cls: "item bookspantwo",
+  },
+  {
+    id: 3,
+    cls: "item photo",
+  },
+  {
+    id: 4,
+    cls: "item blog",
+  },
+  {
+    id: 5,
+    cls: "item blog",
+  },
+  {
+    id: 6,
+    cls: "item photo",
+  },
+  {
+    id: 7,
+    cls: "item blog",
+  },
+  {
+    id: 8,
+    cls: "item bookspantwo",
+  },
+  {
+    id: 9,
+    cls: "item photo",
+  },
+  {
+    id: 10,
+    cls: "item blog",
+  },
+];
 export const Books = [
   {
     title: "Unlocking Android",
@@ -3768,5 +3778,5 @@ export const Books = [
     status: "PUBLISH",
     authors: ["Rob Crowther", "Joe Lennon", "Ash Blue", "", "Greg Wanish"],
     categories: [],
-  }
+  },
 ];

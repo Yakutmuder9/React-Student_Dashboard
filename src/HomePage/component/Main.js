@@ -8,7 +8,6 @@ import figmalogo from "../../app/assets/images/figma.png";
 import nodelogo from "../../app/assets/images/Nodejs.png";
 import vuelogo from "../../app/assets/images/Vue.png";
 import "./Main.css";
-import $ from "jquery";
 
 const Home = () => {
   
@@ -16,7 +15,7 @@ const Home = () => {
     <div className="home">
       <div className="hacking">
         <p>HACKING THE CELL</p>
-        <h1>Transfrom your future career first with us</h1>
+        <h1>Transfrom your future career with us</h1>
         <div className="learn-more rippleBtn">
           <button className="box ">
             Learn More <AiOutlineCaretRight className="learn-icon" />
@@ -27,34 +26,27 @@ const Home = () => {
 
       <span className="circle-one ">
         <div class="main">
-          {/* <div className="mainround"></div> */}
-          <img class="san-center " src={main} id="spinerImg" />
+          <img alt="" class="san-center " src={main} id="spinerImg" />
           <div class="item  d-flex justify-content-center p-5 m-5 rounded-circle" id="spinerone">
-            <img src={bootlogo} id="spinerImg" className="rounded-circle"/>
+            <img alt="" src={bootlogo} id="spinerImg" className="rounded-circle"/>
           </div>
           <div class="item  d-flex justify-content-center p-5 m-5 rounded-circle" id="spinertwo">
-            <img src={JSlogo} id="spinerImg" className="rounded-circle"/>
+            <img alt="" src={JSlogo} id="spinerImg" className="rounded-circle"/>
           </div>
           <div class="item  d-flex justify-content-center p-5 m-5 rounded-circle" id="spinerthree">
-            <img src={reactlogo} id="spinerImg" />
+            <img alt="" src={reactlogo} id="spinerImg" />
           </div>
           <div class="item  d-flex justify-content-center p-5 m-5 rounded-circle" id="spinerfour">
-            <img src={nodelogo} id="spinerImg" />
+            <img alt="" src={nodelogo} id="spinerImg" />
           </div>
           <div class="item  d-flex justify-content-center p-5 m-5 rounded-circle" id="spinerfive">
-            <img src={vuelogo} />
+            <img alt="" src={vuelogo} />
           </div>
           <div class="item  d-flex justify-content-center p-5 m-5 rounded-circle" id="spinersix">
-            <img src={figmalogo} id="spinerImg" />
+            <img alt="" src={figmalogo} id="spinerImg" />
           </div>
         </div>
       </span>
-      {/* <div className="circle-one bg-primary"></div> */}
-
-      {/* <img src={main} alt=''/> */}
-
-      {/* <div className="circle-two bg-secondary">
-      </div> */}
     </div>
   );
 };

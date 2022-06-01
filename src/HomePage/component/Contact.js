@@ -6,8 +6,8 @@ const Contact = () => {
     <div className="contact">
       <div className="partener">
         <div className="partener-btn">
-            <FiChevronLeft className="btn-left" /> 
-            <FiChevronRight className="btn-right"/>
+          <FiChevronLeft className="btn-left" />
+          <FiChevronRight className="btn-right" />
         </div>
         <h1>Our Parteners</h1>
         <p>We are proud to be working landing institution</p>
@@ -71,9 +71,7 @@ const Contact = () => {
               <FiChevronRight />
             </button>
           </label>
-        <div className="copyright">
-            Copyright © 2022 All Rights Reserved
-        </div>
+          <div className="copyright">Copyright © 2022 All Rights Reserved</div>
         </div>
       </footer>
     </div>

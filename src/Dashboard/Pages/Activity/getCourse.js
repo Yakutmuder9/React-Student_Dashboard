@@ -1,13 +1,7 @@
-import { FaPlus } from "react-icons/fa";
 import { useState } from "react";
-import BootLogo from "../../../app/assets/images/bootstrap.png";
-import ReactLogo from "../../../app/assets/images/react.png";
-import JsLogo from "../../../app/assets/images/js.png";
-import { Link } from "react-router-dom";
 import { CourseList } from "../../../app/Courses/CourseList";
 
 const GetCourse = () => {
-  // const [searchBook, setSearchBook] = useState([CourseList]);
   const [filteredBook, setfilteredBook] = useState(false);
   let newbtn = CourseList.filter((e) => e.id === 1);
   let bignner = CourseList.filter((e) => e.id === 2);
@@ -24,7 +18,6 @@ const GetCourse = () => {
     setfilteredBook(newbtn);
     console.log(popular);
   }
-  function filterBtn() {}
 
   return (
     <div className=" justify-content-between ">

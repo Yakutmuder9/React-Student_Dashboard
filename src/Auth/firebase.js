@@ -8,14 +8,9 @@ const firebaseConfig = {
   storageBucket: "mydashbord-6734b.appspot.com",
   messagingSenderId: "765717553133",
   appId: "1:765717553133:web:92aa05dca27e7455d9d1e4",
-  measurementId: "G-00CT5V0YYX"
+  measurementId: "G-00CT5V0YYX",
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export default app;
-
-
-
-

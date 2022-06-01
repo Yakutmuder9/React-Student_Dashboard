@@ -6,7 +6,6 @@ import Project from "./component/Project";
 import Contact from "./component/Contact";
 
 const HomePage = () => {
-
   return (
     <div className="Home overflow-auto bg-dark">
       <Header />

@@ -30,11 +30,11 @@
 }
 
 .home .item {
-    z-index: -1;
+  z-index: -1;
   animation: spinAround 12s linear infinite;
 }
 .home .item:hover {
-   animation-duration: 99s;
+  animation-duration: 99s;
 }
 
 .main > * > img {
@@ -78,8 +78,6 @@
 #spinersix {
   animation-delay: -12s;
 }
-
-
 
 .rippleBtn {
   background-position: center;

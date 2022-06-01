@@ -11,30 +11,93 @@ import Profile from "./Dashboard/Pages/Profile_page/Profile";
 import GetCourse from "./Dashboard/Pages/Activity/getCourse";
 import Help from "./Dashboard/Pages/Help/Help";
 import ProtectedRoute from "./Auth/ProtectedRoute";
-import { UserAuthContextProvider } from './Auth/UserAuthContext'
-import './App.css';
+import { UserAuthContextProvider } from "./Auth/UserAuthContext";
+import "./App.css";
 
 function App() {
-  return (<div className="App">
-    <UserAuthContextProvider>
-      <Routes>
-        <Route path="" element={<HomePage />} />
+  return (
+    <div className="App">
+      <UserAuthContextProvider>
+        <Routes>
+          <Route path="" element={<HomePage />} />
 
-        
-          <Route path="dashboard" element={<ProtectedRoute><Dashboard authorised={true} /></ProtectedRoute>}>
-            <Route path="" element={<ProtectedRoute><Activity /></ProtectedRoute>} />
-            <Route path="courses" element={<ProtectedRoute><Course /></ProtectedRoute>} />
-            <Route path="event" element={<ProtectedRoute><Event /></ProtectedRoute>} />
-            <Route path="inbox" element={<ProtectedRoute><Inbox /></ProtectedRoute>} />
-            <Route path="resources" element={<ProtectedRoute><Resources /></ProtectedRoute>} />
-            <Route path="profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
-            <Route path="help" element={<ProtectedRoute><Help /></ProtectedRoute>} />
-            <Route path="getcourse" element={<ProtectedRoute><GetCourse /></ProtectedRoute>} />
+          <Route
+            path="dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard authorised={true} />
+              </ProtectedRoute>
+            }
+          >
+            <Route
+              path=""
+              element={
+                <ProtectedRoute>
+                  <Activity />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="courses"
+              element={
+                <ProtectedRoute>
+                  <Course />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="event"
+              element={
+                <ProtectedRoute>
+                  <Event />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="inbox"
+              element={
+                <ProtectedRoute>
+                  <Inbox />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="resources"
+              element={
+                <ProtectedRoute>
+                  <Resources />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="profile"
+              element={
+                <ProtectedRoute>
+                  <Profile />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="help"
+              element={
+                <ProtectedRoute>
+                  <Help />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="getcourse"
+              element={
+                <ProtectedRoute>
+                  <GetCourse />
+                </ProtectedRoute>
+              }
+            />
           </Route>
 
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
-    </UserAuthContextProvider>
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </UserAuthContextProvider>
     </div>
   );
 }

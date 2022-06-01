@@ -2,13 +2,11 @@ import { useState, useEffect } from "react";
 import login from "../../app/assets/images/login.svg";
 import cool from "../../app/assets/images/cool.svg";
 import Google from "../../app/assets/images/google.png";
-import { useParams, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { useUserAuth } from "../../Auth/UserAuthContext";
-
 import "./login.css";
 
-const LoginPage = ({ campsiteId }) => {
-  const [modalOpen, setModalOpen] = useState(false);
+const LoginPage = () => {
   const [roller, setRoller] = useState(false);
   const initialValues = { username: "", email: "", password: "" };
   const [formValues, setFormValues] = useState(initialValues);
@@ -19,12 +17,6 @@ const LoginPage = ({ campsiteId }) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setFormErrors(validate(formValues));
-  //   setIsSubmit(true);
-  // };
 
   useEffect(() => {
     console.log(formErrors);
@@ -51,26 +43,24 @@ const LoginPage = ({ campsiteId }) => {
     return errors;
   };
 
-  let { username } = useParams();
-
   function signUpRollerStyles() {
     setRoller(!roller);
   }
 
   const { logOut, user } = useUserAuth();
   const navigate = useNavigate();
-  const handleLogout = async (e) => {
-    
-    e.preventDefault();
-    setFormErrors(validate(formValues));
-    setIsSubmit(true);
-    try {
-      await logOut();
-      navigate("/");
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
+
+  // const handleLogout = async (e) => {
+  //   e.preventDefault();
+  //   setFormErrors(validate(formValues));
+  //   setIsSubmit(true);
+  //   try {
+  //     await logOut();
+  //     navigate("/");
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // };
 
 
    const [email, setEmail] = useState("");
@@ -123,7 +113,7 @@ const LoginPage = ({ campsiteId }) => {
                 can sign up here. else you can sign in on the right side.
               </h5>
               
-              <img src={login} />
+              <img alt="" src={login} />
             </div>
           ) : (
             <div
@@ -136,7 +126,7 @@ const LoginPage = ({ campsiteId }) => {
                 can sign up here. else you can sign in on the right side.
               </h5>
               
-              <img src={cool} />
+              <img alt="" src={cool} />
             </div>
           )}
 
@@ -233,7 +223,7 @@ const LoginPage = ({ campsiteId }) => {
           </div>
 
           <div className="signupImage">
-            <img className="cool mt-5 pt-5 " src={cool} alt="" />
+            <img alt="" className="cool mt-5 pt-5 " src={cool} />
           </div>
         </div>
 
@@ -337,7 +327,7 @@ const LoginPage = ({ campsiteId }) => {
               <h5 className="text-dark ">Or</h5>
               <div className="google_singin">
                 <button className="btn btn-primary  text-white w-100 py-2" type="submit" onClick={handleGoogleSignIn}>
-                 <img src={Google} className='pe-2 mb-1'/> Continue with Google
+                 <img alt="" src={Google} className='pe-2 mb-1'/> Continue with Google
                 </button>
               </div>
             </form>

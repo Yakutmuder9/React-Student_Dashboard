@@ -1,10 +1,11 @@
-.home span {
+.home #rigthCircle {
+  position: relative;
   display: grid;
   justify-content: center;
   align-content: center;
   background-color: #1f1302;
   width: 100vmin;
-  height: 100vmin;
+  height: auto;
 }
 .home .main {
   width: 70vmin;

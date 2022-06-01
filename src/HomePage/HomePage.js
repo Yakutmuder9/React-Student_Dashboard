@@ -7,7 +7,7 @@ import Contact from "./component/Contact";
 
 const HomePage = () => {
   return (
-    <div className="Home overflow-auto bg-dark">
+    <div className="Home overflow-auto bg-dark" id="HomeComp">
       <Header />
       <Main />
       <About />

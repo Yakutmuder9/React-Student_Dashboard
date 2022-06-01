@@ -10,20 +10,29 @@
   font-family: "Oswald", sans-serif;
 }
 :root {
-  --color: rgb(194, 120, 25);
+  --color1: rgb(194, 120, 25);
   --color2: rgb(0, 255, 242);
-  --background: radial-gradient(
+  --colorPrimary: #0275d8;
+  --colorPrimary: #0275d8;
+  --colorSuccess: #5cb85c;
+  --colorInfo: #5bc0de;
+  --colorWarning:#f0ad4e;
+  --colorDanger: #d9534f;
+  --colorWhite: #f7f7f7;
+  --background1: radial-gradient(
+    50% 50% at 64.38% 50%,
+    #364596 0%,
+    #0b1b6d 100%
+  );
+  --background2: radial-gradient(
     50% 50% at 64.38% 50%,
     #364596 0%,
     #0b1b6d 100%
   );
   --background-blend-mode: darken;
 }
-body {
-  width: 100vw;
-  height: auto;
-  background: var(--background);
-}
+
+
 .App {
   width: 100vw;
   height: auto;

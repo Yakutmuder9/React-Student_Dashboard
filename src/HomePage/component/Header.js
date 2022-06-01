@@ -10,6 +10,8 @@ const Navbar = () => {
   const [menulist, setMenulist] = useState(false);
   window.addEventListener("scroll", navHandler);
   window.addEventListener("resize", menulistHandler);
+  
+  
   function navHandler() {
     if (window.scrollY >= 80) {
       setNavDark(true);
@@ -25,13 +27,13 @@ const Navbar = () => {
     }
   }
   return (
-    <nav className={navDark ? "navactive" : ""}>
+    <nav className={navDark? "navactive" : ""}>
       <div className="logo">
-        <h1>MyDashbord</h1>
+        <h1 className="pt-1 ">MyDashbord</h1>
         {menulist ? (
           <></>
         ) : (
-          <ul>
+          <ul className="pt-2 mt-2 ">
             <li className="solution">Solution</li>
             <li>Tools</li>
             <li>About</li>

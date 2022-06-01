@@ -3,7 +3,7 @@ import { AiOutlineCaretRight } from "react-icons/ai";
 
 const About = () => {
   return (
-    <div className="about">
+    <div className="about" id="about">
       <div className="about-titel">
         <h1>Our Solutions</h1>
         <div className="underline"></div>

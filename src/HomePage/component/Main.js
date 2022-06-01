@@ -8,23 +8,29 @@ import figmalogo from "../../app/assets/images/figma.png";
 import nodelogo from "../../app/assets/images/Nodejs.png";
 import vuelogo from "../../app/assets/images/Vue.png";
 import "./Main.css";
+import tab from "../../app/assets/images/tab.png";
+import "./Main.css";
 
 const Home = () => {
   
   return (
-    <div className="home">
-      <div className="hacking">
-        <p>HACKING THE CELL</p>
-        <h1>Transfrom your future career with us</h1>
+    <div className="home d-flex justify-content-between" id="homebody">
+      <div className="hacking ">
+        <p>HACKING THE NUCLEUS</p>
+        <h1>Transfrom your future dream with us</h1>
         <div className="learn-more rippleBtn">
           <button className="box ">
             Learn More <AiOutlineCaretRight className="learn-icon" />
           </button>
           <div className="box"></div>
         </div>
+        
+          <div className="mainImg d-block d-md-none text-center h-50 w-100 pt-3">
+            <img src={tab} alt='' className="h-100 w-100"/>
+          </div>
       </div>
-
-      <span className="circle-one ">
+     
+      <div className="circle-one d-none d-md-block" id='rigthCircle'>
         <div class="main">
           <img alt="" class="san-center " src={main} id="spinerImg" />
           <div class="item  d-flex justify-content-center p-5 m-5 rounded-circle" id="spinerone">
@@ -46,7 +52,8 @@ const Home = () => {
             <img alt="" src={figmalogo} id="spinerImg" />
           </div>
         </div>
-      </span>
+      </div>
+      
     </div>
   );
 };

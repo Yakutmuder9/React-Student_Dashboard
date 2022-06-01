@@ -107,7 +107,7 @@ const LoginPage = () => {
               className=" d-block  position-absolute text-dark"
               id="rollerRight_text"
             >
-              <h1 className=" text-white">Get start you future dream with us!</h1>
+              <h1 className=" text-white text-center">Get start you future dream with us!</h1>
               <h5 className="pt-4 text-center text-white">
                 Hey, is this your first time to to visit our website ? If so you
                 can sign up here. else you can sign in on the right side.
@@ -140,7 +140,7 @@ const LoginPage = () => {
             >
               <h1 className="text-dark bolder">Sign Up</h1>
 
-              <form className="ms-5 ps-5">
+              <form className="ms-5 ps-5 bg-dark">
                 <div className="form-group d-flex text-start ps-3">
                   <div>
                     <label for="signupFirsttname" className="text-dark">
@@ -219,6 +219,7 @@ const LoginPage = () => {
                   </button>
                 </div>
               </form>
+              
             </div>
           </div>
 

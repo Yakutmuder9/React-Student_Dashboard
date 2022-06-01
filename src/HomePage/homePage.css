@@ -1,8 +1,8 @@
-.Home {
+#HomeComp {
   width: 100vw;
-  height: auto;
-  overflow-y: scroll;
-  overflow-x: hidden !important;
+  height: 100vh!important;
+  overflow-x: hidden!important;
+  background: radial-gradient(50% 40% at 60% -13%, #364596 0%, #0b1b6d 100%);
 }
 nav {
   position: fixed;
@@ -19,7 +19,7 @@ nav {
   justify-content: space-between;
 }
 .navactive {
-  background: radial-gradient(20% 80% at -4.38% 50%, #485394 10%, #33428d 100%);
+  background: radial-gradient(20% 80% at -4.38% 50%, #485394 10%, #33428d 100%)!important;
 }
 .logo {
   position: absolute;
@@ -67,23 +67,22 @@ nav button {
 }
 
 /*------Home page--------------  -*/
-.home {
+#homebody {
   width: 100vw;
   height: 100vh;
-  padding: 0 12vw;
-  display: flex;
+  padding: 0 10vw;
   z-index: 1;
-  justify-content: center;
+  overflow: visible;
+  justify-content: space-between;
   align-items: center;
   padding-top: 120px;
 }
 .hacking {
-  position: absolute;
-  z-index: 4;
   left: 12vw;
-  top: 170px;
-  width: 40vw;
-  height: 80%;
+  top: 190px;
+  width: auto;
+  height: 90%;
+  z-index: 4;
 }
 .hacking p {
   color: var(--color2);
@@ -118,12 +117,33 @@ nav button {
   border-left: 2px solid var(--color2);
 }
 
-.right-home {
+
+
+#rigthCircle{
+  position: absolute;
+  z-index: 1;
+  overflow: visible;
+  padding: 10px;
+  margin-right: 5vw;
+  /* border-radius: 50%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(0, 0, 0, 0) 37.53%,
+    rgba(7, 146, 224, 0.09) 99%
+  );
+  border: 8px solid rgba(32, 79, 149, 0.38); */
+  width: 50%!important;
+  height: auto;
+  background-color: transparent!important;
+}
+
+
+/* .right-home {
   width: 50%;
   height: auto;
   margin-right: 2vmin;
-}
-.circle-one {
+} */
+/* .circle-one {
   position: absolute;
   width: 50vmax;
   height: 50vmax;
@@ -137,8 +157,8 @@ nav button {
     rgba(7, 146, 224, 0.09) 99%
   );
   border: 8px solid rgba(32, 79, 149, 0.38);
-}
-.circle-two {
+} */
+/* .circle-two {
   position: absolute;
   width: 40vmax;
   height: 40vmax;
@@ -155,14 +175,14 @@ nav button {
   );
   border: 8px solid rgba(32, 79, 149, 0.38);
   box-sizing: border-box;
-}
+} */
 
 /*--About page--------*/
-.about {
+#about {
   position: relative;
   width: 100vw;
   height: 100vh;
-  z-index: -6;
+  z-index: 6;
   padding-top: 110px;
   padding-left: 12vw;
   padding-right: 12vw;

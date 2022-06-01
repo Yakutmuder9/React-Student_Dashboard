@@ -1,8 +1,10 @@
+
+
 .Home {
   width: 100vw;
   height: auto;
-  overflow: scroll;
-  overflow: visible!important;
+  overflow-y: scroll;
+  overflow-x: hidden!important;
 }
 nav {
   position: fixed;

@@ -49,9 +49,6 @@
   font-size: 38px;
   cursor: pointer;
 }
-#sideNav NavLink {
-  text-decoration: none !important;
-}
 #acountDetailTx {
   color: rgb(212, 211, 211)!important;
   cursor: all-scroll;

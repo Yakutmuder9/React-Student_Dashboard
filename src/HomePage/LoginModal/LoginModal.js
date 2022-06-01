@@ -117,8 +117,8 @@ const LoginPage = ({ campsiteId }) => {
               className=" d-block  position-absolute text-dark"
               id="rollerRight_text"
             >
-              <h1>Get start you future dream with us!</h1>
-              <h5 className="pt-4 text-center">
+              <h1 className=" text-white">Get start you future dream with us!</h1>
+              <h5 className="pt-4 text-center text-white">
                 Hey, is this your first time to to visit our website ? If so you
                 can sign up here. else you can sign in on the right side.
               </h5>
@@ -130,8 +130,8 @@ const LoginPage = ({ campsiteId }) => {
               className=" d-block  position-absolute text-dark"
               id="roller_text"
             >
-              <h1>Glad to see you!</h1>
-              <h5 className="pt-4 text-center">
+              <h1 className="text-white">Glad to see you!</h1>
+              <h5 className="pt-4 text-center text-white">
                 Hey, is this your first time to to visit our website ? If so you
                 can sign up here. else you can sign in on the right side.
               </h5>

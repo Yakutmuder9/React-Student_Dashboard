@@ -33,7 +33,6 @@ const SideNav = () => {
                   <div className="col shadow " id="DashboardLogo">
                     <img className=" " id="logo_bird" src={Bird} alt=''/>
                     <h1 className="pt-4 pb-4 ps-5 mt-4 bolder">MyDashboard</h1>
-                    <hr className="horizontal bg-secondary p-1 mt-2" />
                   </div>
                 )}
               </p>
@@ -43,7 +42,7 @@ const SideNav = () => {
             </div>
           </SidebarHeader>
 
-          <div className="mt-2 pt-1 h-100 overflow-auto  d-block bg-dark" id="sideNavBtn">
+          <div className="mt-4 pt-1 h-100 overflow-auto  d-block bg-dark" id="sideNavBtn">
             <NavLink to="/dashboard" className='text-decoration-none'>
               {" "}
               <Button  className=" w-100 mt-2 py-2" variant="white">

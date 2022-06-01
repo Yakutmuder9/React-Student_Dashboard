@@ -28,6 +28,9 @@
   scrollbar-width: thin;
   scrollbar-color: blue orange;
 }
+#LeftSide {
+  transform: rotate(-.01deg);
+}
 #rightSide {
   width: 100% !important;
   height: auto !important;
@@ -65,7 +68,7 @@ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     #0b1b6d 4.81%,
     rgba(11, 27, 109, 0) 128.13%
   ) !important;
-  box-shadow: 20px 20px 60px #ec1a1a;
+  box-shadow: 20px 20px 60px #0053f8;
 }
 #NavBtnBurger {
   width: 50px;

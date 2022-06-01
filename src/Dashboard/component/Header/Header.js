@@ -16,9 +16,19 @@ import {
   FormControl,
   Button,
 } from "react-bootstrap";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Header = () => {
+
+  const urlLocation = window.location.pathname.substring(1);
+
+  function capitalizeFirstLetter(e) {
+    return e.charAt(0).toUpperCase() + e.slice(1);
+  }
+  // const str = str.substring(1)
+  const urlLocationCapitalize = capitalizeFirstLetter(`${urlLocation}`);
+  console.log(urlLocationCapitalize)
+
   return (
     <div className=" sticky-top " id="topnavBar">
       <Navbar
@@ -29,7 +39,9 @@ const Header = () => {
         className="d-block d-lg-none  h-auto "
         id="naveToggler"
       >
-        <Navbar.Brand href="#home" id="navLogo" >MyDashboard</Navbar.Brand>
+        <Navbar.Brand href="#home" id="navLogo">
+          MyDashboard
+        </Navbar.Brand>
 
         <Navbar.Toggle
           className="text-top"
@@ -44,17 +56,14 @@ const Header = () => {
 
             <NavDropdown title="Courses" id="collasible-nav-dropdown">
               <NavDropdown.Item href="courses">Bootstrap</NavDropdown.Item>
-              <NavDropdown.Item href="courses">
-                React
-              </NavDropdown.Item>
+              <NavDropdown.Item href="courses">React</NavDropdown.Item>
               <NavDropdown.Item href="courses">Node Js</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="courses">
                 Web Architecture
               </NavDropdown.Item>
             </NavDropdown>
-          
-          
+
             <Nav.Link href="Inbox">Inbox</Nav.Link>
             <Nav.Link href="resources">Resources</Nav.Link>
             <Nav.Link eventKey={2} href="/">
@@ -79,11 +88,10 @@ const Header = () => {
               <li
                 class="breadcrumb-item text-sm text-white active"
                 aria-current="page"
-              >
-                Dashboard
+              >{urlLocation}
               </li>
             </ol>
-            <h5 class="font-weight-bolder mb-0 text-secondary">Dashboard</h5>
+            <h5 class="font-weight-bolder mb-0 text-secondary">{urlLocationCapitalize}</h5>
           </div>
 
           <div
@@ -118,8 +126,10 @@ const Header = () => {
                   <FaBell class="fa fa-cog cursor-pointer" id="setting" />
                 </a>
               </li>
-            <div className="h-100">
-              <Link to='profile' className="h-100"><img src={prof} alt="" className="profileImage" /></Link> 
+              <div className="h-100">
+                <Link to="profile" className="h-100">
+                  <img src={prof} alt="" className="profileImage" />
+                </Link>
               </div>
             </ul>
           </div>

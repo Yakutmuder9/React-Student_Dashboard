@@ -15,6 +15,8 @@ const Activity = () => {
         </div>
         <button className="bg-secondary border p-2 h-50">Browse</button>
       </div>
+
+      
       <div className="courseInProgress ">
         <div className="courseInProgressone d-flex justify-content-between">
           <div class="cardLogo text-dark me-3">
@@ -28,13 +30,13 @@ const Activity = () => {
             </progress>
           </div>
           <div class="cardLogo text-right ">
-            <img src={JsLogo} class="w-100 h-100 p-2" alt="" />
+            <img src={BootLogo} class="w-100 h-100 p-2" alt="" />
           </div>
         </div>
 
         <div className="courseInProgressone d-flex d-flex justify-content-between">
           <div class="cardLogo text-dark">
-            <h5 class=" text-dark">Bootstrap</h5>
+            <h5 class=" text-dark">JavaScript</h5>
             <h4 class=" text-dark">
               125 Project <span class=" text-success">+85%</span>
             </h4>
@@ -44,7 +46,7 @@ const Activity = () => {
             </progress>
           </div>
           <div class="cardLogo">
-            <img src={BootLogo} class="w-100 h-100 p-2" alt="" />
+            <img src={JsLogo} class="w-100 h-100 p-2 rounded" alt="" />
           </div>
         </div>
         <div className="courseInProgressone d-flex d-flex justify-content-between">

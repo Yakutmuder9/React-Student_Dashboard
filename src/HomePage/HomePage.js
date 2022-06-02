@@ -10,9 +10,9 @@ const HomePage = () => {
     <div className="Home overflow-auto bg-dark" id="HomeComp">
       <Header />
       <Main />
-      <About />
+      {/* <About />
       <Project />
-      <Contact />
+      <Contact /> */}
     </div>
   );
 };

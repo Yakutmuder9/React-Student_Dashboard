@@ -29,7 +29,9 @@
   scrollbar-color: blue orange;
 }
 #LeftSide {
-  transform: rotate(-.01deg);
+  /* display: none; */
+  /* width: 250px!important;
+  overflow-x: hidden!important; */
 }
 #rightSide {
   width: 100% !important;

@@ -140,7 +140,7 @@ const LoginPage = () => {
             >
               <h1 className="text-dark bolder">Sign Up</h1>
 
-              <form className="ms-5 ps-5 bg-dark">
+              <form className="ms-5 ps-5 overflow-auto">
                 <div className="form-group d-flex text-start ps-3">
                   <div>
                     <label for="signupFirsttname" className="text-dark">

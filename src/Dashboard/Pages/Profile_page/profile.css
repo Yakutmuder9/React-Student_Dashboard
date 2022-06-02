@@ -1,0 +1,35 @@
+.profile{
+    width: 100%;
+    height: auto;
+}
+.profileTop{
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    box-shadow: 3px 2px 5px darkblue;
+}
+.profileImg{
+    margin-left: 5vw;
+    display: flex;
+    border: 5px solid darkcyan;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+.profileMid{
+    height: 25rem;
+    display: flex;
+}
+.profileMidStart, .profileMidCen,.profileMidEnd{
+    width: 100vw;
+    height: 60vh;
+    background: white;
+    box-shadow: 3px 2px 5px darkblue;
+}
+.profileBot{
+    height: 25rem;
+    background: white;
+    box-shadow: 3px 2px 5px darkblue;
+}

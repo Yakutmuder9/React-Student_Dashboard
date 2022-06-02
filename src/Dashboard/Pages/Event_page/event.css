@@ -1,0 +1,12 @@
+#js-licensing{
+    display: none!important;
+}
+#event span, .e-more-event-close, .e-header-date,th, #event span , .e-title, .e-work-cells, .e-navigate, .e-header-day{
+    color: black !important;
+ }
+.e-keyboard, .e-schedule{
+    background: rgb(247, 247, 247);
+}
+.e-schedule-toolbar-container, .e-schedule-toolbar, .e-toolbar-items .e-tbar-pos, .e-toolbar-left{
+    background: rgb(247, 245, 255)!important;
+}

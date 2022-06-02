@@ -1,23 +1,35 @@
-import { useState } from "react";
+import { useState , ReactDOM } from "react";
 import { CourseList } from "../../../app/Courses/CourseList";
 
 const GetCourse = () => {
-  const [filteredBook, setfilteredBook] = useState(false);
+  const [filteredBook, setfilteredBook] = useState(CourseList);
   let newbtn = CourseList.filter((e) => e.id === 1);
   let bignner = CourseList.filter((e) => e.id === 2);
   let popular = CourseList.filter((e) => e.id === 3);
   function newBtnHadler() {
     setfilteredBook(newbtn);
-    console.log(newbtn);
   }
   function BignnerBtnHadler() {
     setfilteredBook(bignner);
-    console.log(bignner);
   }
   function PopularBtnHadler() {
-    setfilteredBook(newbtn);
-    console.log(popular);
+    setfilteredBook(popular);
   }
+
+  // document.getElementById('child').addEventListener("click",functionName);
+  // function functionName(){
+  //   //function defination
+  //   }
+  // const child = document.getElementById("child");
+
+  // child.addEventListener("click", function handleClick(event) {
+  //   console.log(event.target.parentElement.id);
+  // });
+  const root = ReactDOM.createRoot(
+    document.getElementById('child')
+  );
+  const element = <h1>Hello, world</h1>;
+  root.render(element);
 
   return (
     <div className=" justify-content-between ">
@@ -34,6 +46,7 @@ const GetCourse = () => {
         >
           <button
             type="button"
+            id="button"
             class="btn btn-outline-warning text-white"
             onClick={() => newBtnHadler()}
           >
@@ -57,24 +70,24 @@ const GetCourse = () => {
       </div>
 
       <div className="ourCourse">
-      {CourseList.map((item) => {
+        {filteredBook.map((item) => {
           return (
-              <div className="coursegrops d-flex flex-column justify-content-between align-items-space-btween shadow-lg bg-dark mb-2 rounded p-4">
-               <div className="imgPart">
-                 <img src={item.url} alt='' className="w-100 h-50"/>
-               </div>
-               <div className="descpart p-4">
-                 <h5>{item.titel}</h5>
-                 <p>{item.dicription}</p>
-               </div>
-               <div className="d-flex bg-secondary justify-content-between w-100">
-                <h5 className="pt-2 ps-2">{item.id}$</h5>
-                <button className="btn btn-warning">Add to Cart </button>
-               </div>
+            <div className="coursegrops d-flex flex-column justify-content-between align-items-space-btween shadow-lg bg-dark mb-2 rounded p-4">
+              <div className="imgPart">
+                <img src={item.url} alt="" className="w-100 h-50" />
               </div>
+              <div className="descpart p-4">
+                <h5>{item.titel}</h5>
+                <p>{item.dicription}</p>
+              </div>
+              <div className="d-flex bg-secondary justify-content-between w-100" id="parentCourse">
+                <h5 className="pt-2 ps-2">{item.id}$</h5>
+                <button className="btn btn-warning" id="child">Add to Cart </button>
+              </div>
+            </div>
           );
         })}
-        </div>
+      </div>
     </div>
   );
 };

@@ -9,7 +9,7 @@ const Contact = () => {
           <FiChevronLeft className="btn-left" />
           <FiChevronRight className="btn-right" />
         </div>
-        <h1>Our Parteners</h1>
+        <h1>Our Community</h1>
         <p>We are proud to be working landing institution</p>
       </div>
       <div className="contact-info">
@@ -18,32 +18,32 @@ const Contact = () => {
             <h1>AR</h1>
             <div></div>
           </div>
-          <p>Tech Uk</p>
+          <p>Lorem ipsum</p>
         </div>
         <div className="partener-two">
           <div className="part">
             <FiChevronRight />
           </div>
-          <p>IFGS</p>
+          <p>Lorem ipsum</p>
         </div>
         <div className="partener-three">
           <div className="part fade">
             <FiChevronRight />
             <h2>ORINA</h2>
           </div>
-          <p>FWW Inc.</p>
+          <p>Lorem ipsum Inc.</p>
         </div>
         <div className="partener-four">
           <div className="part">
             <FiChevronLeft />
           </div>
-          <p>GovChain</p>
+          <p>Lorem ipsum</p>
         </div>
         <div className="partener-five">
           <div className="part">
             <FiChevronLeft />
           </div>
-          <p>Digital Isle Of Man</p>
+          <p>Lorem ipsum </p>
         </div>
       </div>
       <footer>

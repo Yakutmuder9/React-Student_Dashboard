@@ -1,20 +1,24 @@
 import React from "react";
+import web from '../../app/assets/images/web.png'
+import com from '../../app/assets/images/com.jpg'
+import sec from '../../app/assets/images/p6.jpg'
 import { AiOutlineCaretRight } from "react-icons/ai";
 
 const About = () => {
   return (
     <div className="about" id="about">
       <div className="about-titel">
-        <h1>Our Solutions</h1>
+        <h1>Our Blends..</h1>
         <div className="underline"></div>
       </div>
       <div className="solution-items">
         <div className="solution-first">
-          <div className="solution-works"></div>
-          <h2>Infrastructure</h2>
+          <div className="solution-works">
+            <img src={com} alt='' />
+          </div>
+          <h2>Web App</h2>
           <p>
-            Build on our complete open source blockchains protocol layer for
-            business.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident est laborum.
           </p>
           <div className="learn-more">
             <button>
@@ -23,11 +27,13 @@ const About = () => {
           </div>
         </div>
         <div className="solution-second">
-          <div className="solution-works"></div>
-          <h2>Applications</h2>
+          <div className="solution-works">
+            
+          <img src={web} alt='' />
+          </div>
+          <h2>Mobile Apps</h2>
           <p>
-            end blockchain operation system.Optimize business process and create
-            digital assests on our end-to-end blockchain operation system
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua tempor incididunt ut labore et dolore magna aliqua..
           </p>
           <div className="learn-more">
             <button>
@@ -36,11 +42,12 @@ const About = () => {
           </div>
         </div>
         <div className="solution-third">
-          <div className="solution-works"></div>
+          <div className="solution-works">
+          <img src={sec} alt='' />
+          </div>
           <h2>Security</h2>
           <p>
-            Increase smart contract security and avoid costly errors with our
-            industery-leading security service.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
           </p>
           <div className="learn-more">
             <button>

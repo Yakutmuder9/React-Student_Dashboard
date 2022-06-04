@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh!important;
   overflow-x: hidden!important;
-  background: radial-gradient(50% 40% at 60% -13%, #364596 0%, #0b1b6d 100%);
+  /* background: var(--colorDark); */
 }
 nav {
   position: fixed;
@@ -16,10 +16,8 @@ nav {
   font-style: normal;
   padding: 2vmin 2vmin;
   align-items: center;
+  background: var(--colorDark);
   justify-content: space-between;
-}
-.navactive {
-  background: radial-gradient(20% 80% at -4.38% 50%, #485394 10%, #33428d 100%)!important;
 }
 .logo {
   position: absolute;
@@ -186,7 +184,12 @@ nav button {
   padding-top: 110px;
   padding-left: 12vw;
   padding-right: 12vw;
-  background: radial-gradient(50% 40% at 60% -13%, #364596 0%, #0b1b6d 100%);
+  background:linear-gradient(#00072cb9, #0000008c),url('https://images.pexels.com/photos/276223/pexels-photo-276223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') ; 
+min-height: 100%;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
 }
 .about-titel {
   width: fit-content;
@@ -209,6 +212,11 @@ nav button {
   align-items: center;
   justify-content: space-between;
 }
+.solution-items img{
+  width: 100%;
+  height: 100%;
+  
+}
 .solution-works {
   width: 100%;
   height: 50%;
@@ -220,7 +228,7 @@ nav button {
   width: 30%;
   height: 90%;
   border: 3px solid rgba(36, 36, 141, 0.822);
-  background: radial-gradient(0% 50% at 64.38% 50%, #364596 0%, #0b1b6d 150%);
+  background: var(--colorDark);
 }
 .solution-second {
   background: linear-gradient(rgba(15, 69, 141, 0.5), rgba(15, 85, 236, 0.7));
@@ -253,7 +261,7 @@ nav button {
   padding-left: 12vw;
   padding-right: 12vw;
   padding-top: 110px;
-  background: radial-gradient(120% 50% at 64.38% 50%, #364596 0%, #0b1b6d 100%);
+  background: var(--colorDark);
   z-index: 1;
 }
 .project-titel h2 {
@@ -384,11 +392,15 @@ nav button {
 /*----contact page-----*/
 .contact {
   width: 100vw;
-  height: 100vh;
+  height:70vh;
   padding-top: 110px;
   padding-left: 12vw;
   padding-right: 12vw;
-  background: radial-gradient(50% 50% at 64.38% 50%, #364596 0%, #0b1b6d 100%);
+  border-top-right-radius: 150px;
+  box-shadow: 2px -12px 20px rgba(7, 13, 73, 0.888);
+  border-top:5px solid var(--color2);
+  border-right:10px solid var(--color2);
+  background: var(--colorDark);
 }
 .partener {
   width: 100%;
@@ -456,7 +468,7 @@ footer {
   z-index: 2;
   left: 0;
   margin-top: 10vh;
-  height: 30vh;
+  height: 3vh;
   display: flex;
   overflow: hidden;
   align-items: center;

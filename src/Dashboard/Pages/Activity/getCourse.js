@@ -1,4 +1,4 @@
-import { useState , ReactDOM } from "react";
+import { useState, ReactDOM } from "react";
 import { CourseList } from "../../../app/Courses/CourseList";
 
 const GetCourse = () => {
@@ -16,20 +16,38 @@ const GetCourse = () => {
     setfilteredBook(popular);
   }
 
-  // document.getElementById('child').addEventListener("click",functionName);
+  // document.getElementById('button').addEventListener("click",functionName);
   // function functionName(){
-  //   //function defination
+  //   console.log('nre')
   //   }
+
+
+
+
   // const child = document.getElementById("child");
 
   // child.addEventListener("click", function handleClick(event) {
   //   console.log(event.target.parentElement.id);
   // });
-  const root = ReactDOM.createRoot(
-    document.getElementById('child')
-  );
-  const element = <h1>Hello, world</h1>;
-  root.render(element);
+  // const root = ReactDOM.createRoot(
+  //   document.getElementById('child')
+  // );
+  // const element = <h1>Hello, world</h1>;
+  // root.render(element);
+
+  // let buttons = document.getElementsByTagName("button");
+  // let buttonsCount = buttons.length;
+  // for (let i = 0; i <= buttonsCount; i += 1) {
+  //   buttons[i].onclick = function (e) {
+  //     alert(this.id);
+  //   };
+  // }
+
+ 
+
+  function getCourseHandler(e){
+    console.log(e.id)
+  }
 
   return (
     <div className=" justify-content-between ">
@@ -72,7 +90,7 @@ const GetCourse = () => {
       <div className="ourCourse">
         {filteredBook.map((item) => {
           return (
-            <div className="coursegrops d-flex flex-column justify-content-between align-items-space-btween shadow-lg bg-dark mb-2 rounded p-4">
+            <div className="coursegrops d-flex flex-column justify-content-between align-items-space-btween shadow-lg bg-dark mb-2 rounded p-4" id={item.courseNum}>
               <div className="imgPart">
                 <img src={item.url} alt="" className="w-100 h-50" />
               </div>
@@ -80,9 +98,14 @@ const GetCourse = () => {
                 <h5>{item.titel}</h5>
                 <p>{item.dicription}</p>
               </div>
-              <div className="d-flex bg-secondary justify-content-between w-100" id="parentCourse">
+              <div
+                className="d-flex bg-secondary justify-content-between w-100"
+                id="parentCourse"
+              >
                 <h5 className="pt-2 ps-2">{item.id}$</h5>
-                <button className="btn btn-warning" id="child">Add to Cart </button>
+                <button className="btn btn-warning" id={item.courseNum} onClick={(e)=>  getCourseHandler(e)}>
+                  Add to Cart
+                </button>
               </div>
             </div>
           );

@@ -1,6 +1,7 @@
 export const CourseList = [
   {
     id: 1,
+    courseNum: 10,
     titel: "Basics of Web Development",
     dicription:
       "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript",
@@ -10,6 +11,7 @@ export const CourseList = [
   },
   {
     id: 1,
+    courseNum: 20,
     titel: "Introduction to Web Development with HTML, CSS, JavaScript",
     dicription:
       "Want to take the first steps to become a Cloud Application Developer? This course will lead you through the languages and tools you will need to develop your own Cloud Apps.",
@@ -19,6 +21,7 @@ export const CourseList = [
   },
   {
     id: 1,
+    courseNum: 30,
     titel: "PostgreSQL for Everybody Specialization",
     dicription:
       "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript",
@@ -28,6 +31,7 @@ export const CourseList = [
   },
   {
     id: 1,
+    courseNum: 40,
     titel: "Introduction to HTML5",
     dicription:
       "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript",
@@ -37,6 +41,7 @@ export const CourseList = [
   },
   {
     id: 1,
+    courseNum: 50,
     titel: "Java Programming: Solving Problems with Software",
     dicription:
       "Using custom open-source classes, you will write programs that access and transform images, websites, and other types of data. At the end of the course you will build a program ",
@@ -46,6 +51,7 @@ export const CourseList = [
   },
   {
     id: 1,
+    courseNum: 60,
     titel: "Web Applications for Everybody Specialization",
     dicription: "Build dynamic database-backed web sites.. ",
     outcome: `Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental`,
@@ -55,15 +61,17 @@ export const CourseList = [
 
   {
     id: 2,
-    titel: "Basics of Web Development",
+    courseNum: 70,
+    titel: "Javascript Mastery",
     dicription:
       "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript",
     outcome: `Skills you'll gain: HTMLAllCollection, CSS and Javascript foundamental`,
-    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShCHTNzpPhfgre-Y0V9Lf7ZT2fG2yQTaPZme2bjE6OZAMcfPC11w6SatKbSuVVw-qxNt8&usqp=CAU",
+    url: "https://mechomotive.com/wp-content/uploads/2021/08/javascript-1567486564472.jpg",
     timeleagth: 4.2,
   },
   {
     id: 2,
+    courseNum: 80,
     titel: "Object Oriented Programming in Java Specialization",
     dicription:
       "Grow Your Portfolio as a Software Engineer. for aspiring software developers with some programming experience in at least one other programming language",
@@ -73,6 +81,7 @@ export const CourseList = [
   },
   {
     id: 2,
+    courseNum: 90,
     titel: "Google UX Design Professional Certificate",
     dicription:
       "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript",
@@ -82,6 +91,7 @@ export const CourseList = [
   },
   {
     id: 2,
+    courseNum: 100,
     titel: "Google Data Analytics Professional Certificate",
     dicription:
       "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript",
@@ -91,6 +101,7 @@ export const CourseList = [
   },
   {
     id: 2,
+    courseNum: 110,
     titel: "Basics of Web Development",
     dicription:
       "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript",
@@ -100,6 +111,7 @@ export const CourseList = [
   },
   {
     id: 2,
+    courseNum: 120,
     titel: "Basics of Web Development",
     dicription:
       "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript",
@@ -110,6 +122,7 @@ export const CourseList = [
 
   {
     id: 3,
+    courseNum: 130,
     titel: "IBM Full Stack Software Developer Professional Certificate",
     dicription:
       "Master Cloud Native and Full Stack Development using hands-on projects involving HTML, JavaScript, Node.js, Python, Django, Containers, Microservices and more. No prior experience required.",
@@ -119,6 +132,7 @@ export const CourseList = [
   },
   {
     id: 3,
+    courseNum: 140,
     titel: "Basics of Web Development",
     dicription:
       "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript",
@@ -128,6 +142,7 @@ export const CourseList = [
   },
   {
     id: 3,
+    courseNum: 150,
     titel: "Introduction to Accessible Web Development",
     dicription:
       "pecifically, you will learn how assistive technology interprets our web code, how to apply semantic HTML in order to write more meaningful interfaces, methods for coupling visual styles to the accessibility properties of a component, and creating a custom accessible component from scratch using WAI-ARIA.",
@@ -137,6 +152,7 @@ export const CourseList = [
   },
   {
     id: 3,
+    courseNum: 160,
     titel: "Introduction to Accessible Web Development",
     dicription:
       "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript",
@@ -146,6 +162,7 @@ export const CourseList = [
   },
   {
     id: 3,
+    courseNum: 170,
     titel: "Front-End Web Development with React",
     dicription:
       "This course is part of the Full-Stack Web Development with React Specialization",
@@ -155,6 +172,7 @@ export const CourseList = [
   },
   {
     id: 3,
+    courseNum: 180,
     titel: "Basics of Web Development",
     dicription:
       "Learn to Design and Create Websites. Build a responsive and accessible web portfolio using HTML5, CSS3, and JavaScript",

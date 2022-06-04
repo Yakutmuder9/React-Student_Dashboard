@@ -17,7 +17,7 @@ const Home = () => {
     <div className="home d-flex justify-content-between" id="homebody">
       <div className="hacking ">
         <p>HACKING THE NUCLEUS</p>
-        <h1>Transfrom your future dream with us</h1>
+        <h1 className="transforQuot">Transfrom your future dream with us</h1>
         <div className="learn-more rippleBtn">
           <button className="box ">
             Learn More <AiOutlineCaretRight className="learn-icon" />
@@ -32,8 +32,8 @@ const Home = () => {
      
       <div className="circle-one d-none d-md-block" id='rigthCircle'>
         <div class="main">
-          <img alt="" class="san-center " src={main} id="spinerImg" />
-          <div class="item  d-flex justify-content-center p-5 m-5 rounded-circle" id="spinerone">
+          <img alt="" class="san-center jetspinerImg" src={tab} id="spinerImg" />
+          {/* <div class="item  d-flex justify-content-center p-5 m-5 rounded-circle" id="spinerone">
             <img alt="" src={bootlogo} id="spinerImg" className="rounded-circle"/>
           </div>
           <div class="item  d-flex justify-content-center p-5 m-5 rounded-circle" id="spinertwo">
@@ -50,7 +50,7 @@ const Home = () => {
           </div>
           <div class="item  d-flex justify-content-center p-5 m-5 rounded-circle" id="spinersix">
             <img alt="" src={figmalogo} id="spinerImg" />
-          </div>
+          </div> */}
         </div>
       </div>
       

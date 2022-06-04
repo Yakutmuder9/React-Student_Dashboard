@@ -19,11 +19,7 @@
   --colorWarning:#f0ad4e;
   --colorDanger: #d9534f;
   --colorWhite: #f7f7f7;
-  --background1: radial-gradient(
-    50% 50% at 64.38% 50%,
-    #364596 0%,
-    #0b1b6d 100%
-  );
+  --background1: #292b2c;
   --background2: radial-gradient(
     50% 50% at 64.38% 50%,
     #364596 0%,

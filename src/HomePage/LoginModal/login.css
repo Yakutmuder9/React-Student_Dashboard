@@ -100,8 +100,8 @@ form button {
 }
 #roller_text img {
   position: absolute;
-  margin-top: 60vh;
-  margin-left: 30vw;
+  margin-top: 68vh;
+  margin-left: 40vw;
   width: 60%;
 }
 
@@ -120,8 +120,8 @@ form button {
 }
 #rollerRight_text img {
   position: absolute;
-  margin-top: 60vh;
-  margin-left: -30vw;
+  margin-top: 65vh;
+  margin-left: -40vw;
   width: 60%;
 }
 

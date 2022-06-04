@@ -352,7 +352,7 @@ background-size: cover;
   padding: 0 13vw;
   overflow: visible;
   height: 2px;
-  background: rgba(21, 76, 194, 0.822);
+  background: #154cc2d2;
 }
 .filter-btn-overlay div {
   width: 7px;

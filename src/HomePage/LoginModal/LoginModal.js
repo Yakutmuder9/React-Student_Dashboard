@@ -224,7 +224,7 @@ const LoginPage = () => {
           </div>
 
           <div className="signupImage">
-            <img alt="" className="cool mt-5 pt-5 " src={cool} />
+            <img alt="" className="cool mt-5 pt-5 ms-4" src={cool} />
           </div>
         </div>
 
